@@ -66,5 +66,5 @@ CREATE TABLE Alumno_Bootcamp (
 	notes VARCHAR(255),
 	FOREIGN KEY (bootcamp_id) REFERENCES Bootcamp(id),
 	FOREIGN KEY (alumno_id) REFERENCES Alumnos(id),
-	PRIMARY KEY(profesor_id, bootcamp_id, edition)
+	PRIMARY KEY(alumno_id, bootcamp_id, edition)
 );
