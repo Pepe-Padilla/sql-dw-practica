@@ -1,11 +1,21 @@
 -- KeepCoding Practica SQL DataWareHouse
+
+-- Rollback por si se necesita
+--DROP TABLE Alumno_Bootcamp;
+--DROP TYPE status_suscripcion;
+--DROP TABLE Modulo_bootcamp;
+--DROP TABLE Alumnos;
+--DROP TYPE status_alumno;
+--DROP TABLE Modulos;
+--DROP TABLE Profesores;
+
+
 -- Creación tabla Profesores
 CREATE TABLE Profesores (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(150) NOT NULL,
 	email VARCHAR(150) NOT NULL,
 	phone VARCHAR(12) NOT NULL,
-	discord VARCHAR(80),
 	linkedin VARCHAR(255)
 );
 
@@ -32,7 +42,7 @@ CREATE TYPE status_alumno AS ENUM('registred', 'active', 'inactive');
 CREATE TABLE Alumnos (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(80) NOT NULL,
-	first_name VARCHAR(80) NOT NULL,
+	last_name VARCHAR(80) NOT NULL,
 	status status_alumno NOT NULL,
 	phone VARCHAR(12) NOT NULL,
 	email VARCHAR(150) NOT NULL,
@@ -43,13 +53,13 @@ CREATE TABLE Alumnos (
 ---- Relaciones N a N
 -- Creación tabla Modulo_bootcamp
 CREATE TABLE Modulo_bootcamp (
-	profesor_id INT NOT NULL,
+	modulo_id INT NOT NULL,
 	bootcamp_id INT NOT NULL,
 	edition INT NOT NULL,
 	start_date date,
 	finsh_date date,
 	exam_date date,
-	module_link VARCHAR(255)
+	module_link VARCHAR(255),
 	FOREIGN KEY (profesor_id) REFERENCES Profesores(id),
 	FOREIGN KEY (bootcamp_id) REFERENCES Bootcamp(id),
 	PRIMARY KEY(profesor_id, bootcamp_id, edition)
