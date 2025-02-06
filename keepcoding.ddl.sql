@@ -6,6 +6,7 @@
 --DROP TABLE Modulo_bootcamp;
 --DROP TABLE Alumnos;
 --DROP TYPE status_alumno;
+--DROP TABLE Bootcamp;
 --DROP TABLE Modulos;
 --DROP TABLE Profesores;
 
@@ -60,9 +61,9 @@ CREATE TABLE Modulo_bootcamp (
 	finsh_date date,
 	exam_date date,
 	module_link VARCHAR(255),
-	FOREIGN KEY (profesor_id) REFERENCES Profesores(id),
+	FOREIGN KEY (modulo_id) REFERENCES Modulos(id),
 	FOREIGN KEY (bootcamp_id) REFERENCES Bootcamp(id),
-	PRIMARY KEY(profesor_id, bootcamp_id, edition)
+	PRIMARY KEY(modulo_id, bootcamp_id, edition)
 );
 
 -- Creación tabla Alumno_Bootcamp
