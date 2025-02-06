@@ -1,5 +1,5 @@
 -- KeepCoding Practica SQL DataWareHouse
--- Creación tabla Profesores
+-- Datos dummy para Profesores
 CREATE TABLE Profesores (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(150) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE Profesores (
 	linkedin VARCHAR(255)
 );
 
--- Creación tabla Módulos
+-- Datos dummy para Módulos
 CREATE TABLE Modulos (
 	id SERIAL PRIMARY KEY,
 	profesor_id INT NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE Modulos (
 	FOREIGN KEY (profesor_id) REFERENCES Profesores(id)
 );
 
--- Creación tabla Bootcamp
+-- Datos dummy para Bootcamp
 CREATE TABLE Bootcamp (
 	id SERIAL PRIMARY KEY,
 	title VARCHAR(80) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE Bootcamp (
 	temario_link VARCHAR(255)
 );
 
--- Creación tabla Alumnos
+-- Datos dummy para Alumnos
 CREATE TYPE status_alumno AS ENUM('registred', 'active', 'inactive');
 CREATE TABLE Alumnos (
 	id SERIAL PRIMARY KEY,
@@ -41,7 +41,7 @@ CREATE TABLE Alumnos (
 );
 
 ---- Relaciones N a N
--- Creación tabla Modulo_bootcamp
+-- Datos dummy para Modulo_bootcamp
 CREATE TABLE Modulo_bootcamp (
 	profesor_id INT NOT NULL,
 	bootcamp_id INT NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE Modulo_bootcamp (
 	PRIMARY KEY(profesor_id, bootcamp_id, edition)
 );
 
--- Creación tabla Alumno_Bootcamp
+-- Datos dummy para Alumno_Bootcamp
 CREATE TYPE status_suscripcion AS ENUM('interesded', 'pending interview', 'accepted', 'denided', 'payed', 'finished satisfactory', 'finished complete', 'finished not complete', 'cancelled');
 CREATE TABLE Alumno_Bootcamp (
 	bootcamp_id INT NOT NULL,
