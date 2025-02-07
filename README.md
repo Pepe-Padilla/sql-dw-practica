@@ -7,7 +7,7 @@ Este proyecto es un entregable para la práctica del Master Bootcamp Inteligenci
 
 #### A continuación se muestran los ficheros que contienen el resultaod de cada ejercicio.
 
-- Ejercio 1: Archivo [01_ER_practica.drawio.pdf](./01_ER_practica.drawio.pdf), incluye el MR y la explicación de la misma, igualmente se incluye el resumen aqui.
+- **Ejercio 1**: Archivo [01_ER_practica.drawio.pdf](./01_ER_practica.drawio.pdf), incluye el MR y la explicación de la misma, igualmente se incluye el resumen aqui.
 
 ![diagrama](./01_ER_practica.drawio.png)
 
@@ -33,6 +33,12 @@ ocupará el status final de la interacción con los alumnos y sus motivos de est
 ve reflejada en la entidad  ALUMNO_BOOTCAMP 
 ```
 
-- Ejercicio 2: Archivos [02_keepcoding.ddl.sql](./02_keepcoding.ddl.sql) para la inserción del modelo y un conjunto de datos para probar en el archivo [02_keepcoding.dml.sql](./02_keepcoding.dml.sql)
+- **Ejercicio 2**: Archivos [02_keepcoding.ddl.sql](./02_keepcoding.ddl.sql) para la inserción del modelo y un conjunto de datos para probar en el archivo [02_keepcoding.dml.sql](./02_keepcoding.dml.sql)
 
-- Ejercicio 3: Archivo [03_ivr_detail.sql](./03_ivr_detail.sql) muestra la tabla creada para el detalle.
+- **Ejercicio 3**: Archivo [03_ivr_detail.sql](./03_ivr_detail.sql) muestra la tabla creada para el detalle.
+
+- **Ejercicio 4**: Archivo [04_vdn_aggregation.sql](./04_vdn_aggregation.sql) muestra la generalización solicitada.
+
+- **Ejercicio 5**: Para este caso he encontrado más de una solución, no estoy seguro cual sea la mejor así que van ambas:
+  - Solución 1: [05_client_identification1.sql](./05_client_identification1.sql)
+  - Solución 2: [05_client_identification2.sql](./05_client_identification2.sql)
