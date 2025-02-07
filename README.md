@@ -34,3 +34,5 @@ ve reflejada en la entidad  ALUMNO_BOOTCAMP
 ```
 
 - Ejercicio 2: Archivos [02_keepcoding.ddl.sql](./02_keepcoding.ddl.sql) para la inserción del modelo y un conjunto de datos para probar en el archivo [02_keepcoding.dml.sql](./02_keepcoding.dml.sql)
+
+- Ejercicio 3: Archivo [03_ivr_detail.sql](./03_ivr_detail.sql) muestra la tabla creada para el detalle.
