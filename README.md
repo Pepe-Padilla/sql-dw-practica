@@ -42,3 +42,7 @@ ve reflejada en la entidad  ALUMNO_BOOTCAMP
 - **Ejercicio 5**: Para este caso he encontrado más de una solución, no estoy seguro cual sea la mejor así que van ambas:
   - Solución 1: [05_client_identification1.sql](./05_client_identification1.sql)
   - Solución 2: [05_client_identification2.sql](./05_client_identification2.sql)
+
+- **Ejercicio 6**: Igual que el punto anterior publico ambas soluciones:
+  - Solución 1: [06_client_phone1.sql](./06_client_phone1.sql)
+  - Solución 2: [06_client_phone2.sql](./06_client_phone2.sql)
