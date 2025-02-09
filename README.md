@@ -46,3 +46,16 @@ ve reflejada en la entidad  ALUMNO_BOOTCAMP
 - **Ejercicio 6**: Igual que el punto anterior publico ambas soluciones:
   - Solución 1: [06_client_phone1.sql](./06_client_phone1.sql)
   - Solución 2: [06_client_phone2.sql](./06_client_phone2.sql)
+
+- **Ejercicio 7**: Publico 2 soluciones:
+  - Solución 1: [07_client_account1.sql](./07_client_account1.sql)
+  - Solución 2: [07_client_account2.sql](./07_client_account2.sql)
+> En esta ocación he visto que la solución 2 ha entregado la respuesta más rápido que la primera, pero podría ser por el cache, si puedo haré nuevas pruebas a la inversa.
+
+- **Ejercicio 8**: Archivo [08_call_masiva.sql](./08_call_masiva.sql)
+
+- **Ejercicio 9**: Archivo [09_info_by_phone_lg.sql](./09_info_by_phone_lg.sql)
+
+- **Ejercicio 10**: Archivo [10_info_by_dni_lg.sql](./10_info_by_dni_lg.sql)
+
+- **Ejercicio 11**: Archivo [11_24H_phone_lg.sql](./11_24H_phone_lg.sql). Todo digno de un Kata
