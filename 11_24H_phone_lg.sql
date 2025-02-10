@@ -1,43 +1,37 @@
 with calls_numbers_date as (
   -- Primero sacamos, para cada llamada su teléfono y su fecha
   SELECT 
-    distinct ivr_id as call_ivr_id, 
-    first_value(phone_number) OVER(
-      partition by cast(ivr_id as string)
-      ORDER BY phone_number asc
-    ) as call_phone_number,
-    first_value(start_date) OVER(
-      partition by cast(ivr_id as string)
-      ORDER BY start_date asc
-    ) as call_start_date
+    ivr_id as calls_ivr_id, 
+    phone_number as calls_phone_number,
+    start_date as calls_start_date
   from `keepcoding.ivr_calls`
 ),
 calls_24H_more as (
   -- Buscamos los teléfonos que tengan llamada hasta 24h después
   select 
-    distinct ivr_id as calls_ivr_id,
+    ivr_id as calls_ivr_id,
     1 as reapeted_phone_24H_fl
   from `keepcoding.ivr_calls` det
   where phone_number in (
     select phone_number 
     from calls_numbers_date cnd
-    where cnd.call_ivr_id <> det.ivr_id
-      and det.phone_number = cnd.call_phone_number
-      and TIMESTAMP_DIFF(det.start_date, cnd.call_start_date, HOUR) <= 24
+    where cnd.calls_ivr_id <> det.ivr_id
+      and det.phone_number = cnd.calls_phone_number
+      and TIMESTAMP_DIFF(cnd.calls_start_date,det.start_date, MINUTE) between 0 and 1440
   )
 ),
 calls_24H_less as (
   -- Lo mismo pero que tengan llamada hasta 24h antes
   select 
-    distinct ivr_id as calls_ivr_id,
+    ivr_id as calls_ivr_id,
     1 as reapeted_phone_24H_fl
   from `keepcoding.ivr_calls` det
   where phone_number in (
     select phone_number 
     from calls_numbers_date cnd
-    where cnd.call_ivr_id <> det.ivr_id
-      and det.phone_number = cnd.call_phone_number
-      and TIMESTAMP_DIFF(cnd.call_start_date,det.start_date,HOUR) <= 24
+    where cnd.calls_ivr_id <> det.ivr_id
+      and det.phone_number = cnd.calls_phone_number
+      and TIMESTAMP_DIFF(det.start_date,cnd.calls_start_date,MINUTE) between 0 and 1440
   )
 )
 -- Finalmente unimos todo a ivr_detail
