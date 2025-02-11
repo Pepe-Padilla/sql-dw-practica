@@ -59,3 +59,5 @@ ve reflejada en la entidad  ALUMNO_BOOTCAMP
 - **Ejercicio 10**: Archivo [10_info_by_dni_lg.sql](./10_info_by_dni_lg.sql)
 
 - **Ejercicio 11**: Archivo [11_24H_phone_lg.sql](./11_24H_phone_lg.sql). Todo digno de un Kata
+
+- **Ejercicio 12**: Archivo [12_ivr_summary.sql](./12_ivr_summary.sql)

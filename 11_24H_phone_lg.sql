@@ -37,8 +37,8 @@ calls_24H_less as (
 -- Finalmente unimos todo a ivr_detail
 select 
  distinct det.calls_ivr_id,
- ifnull(less24.reapeted_phone_24H_fl,0) as cause_recall_phone_24H,
- ifnull(more24.reapeted_phone_24H_fl,0) as repeated_phone_24H
+ ifnull(less24.reapeted_phone_24H_fl,0) as repeated_phone_24H,
+ ifnull(more24.reapeted_phone_24H_fl,0) as cause_recall_phone_24H
 from `keepcoding.ivr_detail` det
 left join calls_24H_less less24 using(calls_ivr_id)
 left join calls_24H_more more24 using(calls_ivr_id)

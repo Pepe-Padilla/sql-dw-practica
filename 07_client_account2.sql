@@ -8,6 +8,6 @@ qualify row_number() over (PARTITION BY cast(calls_ivr_id as string) ORDER BY ca
 )
 select 
   distinct det.calls_ivr_id,
-  ifnull(ide.billing_account_id,'UNKNOWN') as customer_phone,
+  ifnull(ide.billing_account_id,'UNKNOWN') as billing_account_id,
 from `keepcoding.ivr_detail` det
 left join client_account ide using(calls_ivr_id)
