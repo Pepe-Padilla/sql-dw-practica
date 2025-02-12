@@ -60,4 +60,6 @@ ve reflejada en la entidad  ALUMNO_BOOTCAMP
 
 - **Ejercicio 11**: Archivo [11_24H_phone_lg.sql](./11_24H_phone_lg.sql). Todo digno de un Kata
 
-- **Ejercicio 12**: Archivo [12_ivr_summary.sql](./12_ivr_summary.sql)
+- **Ejercicio 12**: Archivo [12_ivr_summary.sql](./12_ivr_summary.sql).
+
+- **Ejercicio 13**: Archivo [13_limpieza_enteros.sql](./13_limpieza_enteros.sql)
